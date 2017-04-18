@@ -1,0 +1,151 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/weexteam/weex-toolkit#readme"
+
+    >weex-toolkit (v1.0.5)</a>
+</h1>
+<h4>Weex CLI Toolkit</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-toolkit">module weex-toolkit</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-toolkit.</span>generator</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-toolkit.generator">module weex-toolkit.generator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-toolkit.generator.generate">
+            function <span class="apidocSignatureSpan">weex-toolkit.generator.</span>generate
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-toolkit" id="apidoc.module.weex-toolkit">module weex-toolkit</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-toolkit.generator" id="apidoc.module.weex-toolkit.generator">module weex-toolkit.generator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-toolkit.generator.generate" id="apidoc.element.weex-toolkit.generator.generate">
+        function <span class="apidocSignatureSpan">weex-toolkit.generator.</span>generate
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (name) {
+  if(typeof(name) == &#x27;undefined&#x27;) {
+    const dirname = path.resolve(&#x27;.&#x27;).split(path.sep).pop();
+    getName(dirname, chalk.green(&#x27;Generate project in current directory?(Y/n)&#x27;),(err,result) =&#x3e; {
+      if(result.name.toLowerCase() === &#x27;n&#x27;) {
+        return;
+      }
+      const dirpath = process.cwd();
+      let projectName = result.name.toLocaleLowerCase() === &#x27;y&#x27; ? dirname : result.name;
+      copy(projectName,dirpath);
+      replace(projectName,dirpath);
+    })
+
+  } else {
+    getName(name, chalk.green(&#x27;Init your Project&#x27;), (err, result) =&#x3e; {
+      if (err) {
+        return;
+      }
+      let projectName = result.name;
+      const dirpath = path.join(process.cwd(),projectName);
+      createProject(projectName,dirpath);
+    })
+  }
+
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// weex init an project command
+const yargs = require(&#x27;yargs&#x27;);
+const argv = yargs.argv;
+
+const generator = require(&#x27;./generator&#x27;);
+
+generator.<span class="apidocCodeKeywordSpan">generate</span>(argv._[0]);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
