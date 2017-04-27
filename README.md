@@ -1,6 +1,6 @@
 # npmdoc-weex-toolkit
 
-#### api documentation for  [weex-toolkit (v1.0.5)](https://github.com/weexteam/weex-toolkit#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-weex-toolkit.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-weex-toolkit) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-weex-toolkit.svg)](https://travis-ci.org/npmdoc/node-npmdoc-weex-toolkit)
+#### basic api documentation for  [weex-toolkit (v1.0.5)](https://github.com/weexteam/weex-toolkit#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-weex-toolkit.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-weex-toolkit) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-weex-toolkit.svg)](https://travis-ci.org/npmdoc/node-npmdoc-weex-toolkit)
 
 #### Weex CLI Toolkit
 
